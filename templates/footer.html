@@ -1,0 +1,206 @@
+{% load static  %}
+<footer class="site-footer bg-no-repeat bg-full-height bg-center" style="background-image:url(/static/public/images/background/footer-bg.jpg);">
+    <!-- FOOTER BLOCKES START -->
+    <div class="footer-top overlay-wraper">
+        <div class="overlay-main bg-black opacity-05"></div>
+        <div class="container">
+            <div class="row">
+                <!-- ABOUT COMPANY -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="widget widget_about">
+                        <div class="logo-footer clearfix p-b15">
+                            <a href=""><img src="/static/logo.png" width="230" height="67" alt="" /></a>
+                        </div>
+                        <p style="text-align:justify">
+                            Since its establishment, we have shown commendably successful and consistent
+                            performance
+                            and trading history. Currently, it is regarded as one of the best, most beneficial,
+                            brilliantly successful companies in the industry of Crypto trading and investing.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- USEFUL LINKS -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="widget widget_services">
+                        <h4 class="widget-title text-white">Useful links</h4>
+                        <ul>
+                            <li><a href="{% url 'indexurl:index' %}">Home</a></li>
+                            <li><a href="{% url 'indexurl:about' %}">About Us</a></li>
+                            <li><a href="{% url 'indexurl:terms' %}">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6  p-tb20 ">
+                    <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                        <div class="icon-md text-primary">
+                            <span class="fa fa-support" style="font-size:50px"></span>
+                        </div>
+                        <div class="icon-content text-white">
+                            <h5 class="wt-tilte text-uppercase m-b0">24/7 Support</h5>
+                            <p class="m-b0"> <a href="#" style="color:#fff">Share your achievements.  </a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6  p-tb20 ">
+                    <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                        <div class="icon-md text-primary">
+                            <span class="fa fa-telegram" style="font-size:50px"></span>
+                        </div>
+                        <div class="icon-content text-white">
+                            <h5 class="wt-tilte text-uppercase m-b0">Telegram</h5>
+                            <p class="m-b0"> <a href="#" style="color:#fff">Join us</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 p-tb20">
+                    <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                        <div class="icon-md text-primary">
+                            <span class="iconmoon-email"></span>
+                        </div>
+                        <div class="icon-content text-white">
+                            <h5 class="wt-tilte text-uppercase m-b0">Email</h5>
+                            <p class="m-b0"><a href="#'" style="color:#fff">support@octalonlintradersfx.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER COPYRIGHT -->
+    <div class="footer-bottom  overlay-wraper">
+        <div class="overlay-main"></div>
+        <div class="constrot-strip"></div>
+        <div class="container p-t30">
+            <div class="row">
+                <div class="wt-footer-bot-left">
+                    <span class="copyrights-text">
+                        &copy; 2022 Octal online traderfx. All Rights
+                        Reserved.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="scroltop"><span class=" iconmoon-house relative" id="btn-vibrate"></span>Top</button>
+</footer>
+
+
+    <!-- JAVASCRIPT  FILES ========================================= -->
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/static/public/js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
+    <script src="/static/public/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+
+    <script src="/static/public/js/bootstrap-select.min.js"></script><!-- FORM JS -->
+    <script src="/static/public/js/jquery.bootstrap-touchspin.min.js"></script><!-- FORM JS -->
+
+    <script src="/static/public/js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+
+    <script src="/static/public/js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+    <script src="/static/public/js/counterup.min.js"></script><!-- COUNTERUP JS -->
+    <script src="/static/public/js/waypoints-sticky.min.js"></script><!-- COUNTERUP JS -->
+
+    <script src="/static/public/js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+
+    <script src="/static/public/js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+
+    <script src="/static/public/js/stellar.min.js"></script><!-- PARALLAX BG IMAGE   -->
+    <script src="/static/public/js/scrolla.min.js"></script><!-- ON SCROLL CONTENT ANIMTE   -->
+
+    <script src="/static/public/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+    <script src="/static/public/js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
+
+    <script src="/static/public/js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+    <script src="/static/public/js/tickerNews.min.js"></script><!-- TICKERNEWS-->
+    <!-- TICKERNEWS FUNCTiON -->
+    <script type="text/javascript">
+        jQuery(function() {
+            var timer = !1;
+            _Ticker = jQuery("#T1").newsTicker();
+            _Ticker.on("mouseenter", function() {
+                var __self = this;
+                timer = setTimeout(function() {
+                    __self.pauseTicker();
+                }, 200);
+            });
+            _Ticker.on("mouseleave", function() {
+                clearTimeout(timer);
+                if (!timer) return !1;
+                this.startTicker();
+            });
+        });
+
+    </script>
+    <!-- REVOLUTION JS FILES -->
+
+    <script src="/static/public/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/static/public/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="/static/public/plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
+
+    <!-- REVOLUTION SLIDER FUNCTION  ===== -->
+    <script src="/static/public/js/rev-script-1.js"></script>
+
+    <style>
+        .mgm {
+            border-radius: 7px;
+            position: fixed;
+            z-index: 90;
+            bottom: 45%;
+            right: 50px;
+            background: #fff;
+            padding: 10px 27px;
+            box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, .3);
+        }
+
+        .mgm a {
+            font-weight: 700;
+            display: block;
+            color: #8BC34A;
+        }
+
+        .mgm a,
+        .mgm a:active {
+            transition: all .2s ease;
+            color: #8BC34A;
+        }
+
+    </style>
+
+    <div class="mgm" style="display: none;">
+        <div class="txt" style="color:black;"></div>
+    </div>
+
+    <script data-cfasync="false" src="#"></script>
+    <script type="text/javascript">
+        var listCountries = ['South Africa', 'USA', 'Germany', 'France', 'Italy', 'South Africa', 'Australia', 'South Africa', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'South Africa', 'South Africa', 'Venezuela', 'South Africa', 'Sweden', 'South Africa', 'South Africa', 'Italy', 'South Africa', 'United States of America', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
+        var listPlans = ['$15,467.66', '$10,220.12', '$51,120.05', '$40,100.33', '$12,400.15', '$7,000.23', '$9,014.33', '$26,450.23', '$79,300.45', '$29,500.23'];
+        var transarray = ['just <b>invested</b>', 'has <b>withdrawn</b>', 'is <b>trading with</b>'];
+        interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+        var run = setInterval(request, interval);
+
+        function request() {
+            clearInterval(run);
+            interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+            var country = listCountries[Math.floor(Math.random() * listCountries.length)];
+            var transtype = transarray[Math.floor(Math.random() * transarray.length)];
+            var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+            var msg = 'Someone from <b>' + country + '</b> ' + transtype + ' <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + '</a>';
+            $(".mgm .txt").html(msg);
+            $(".mgm").stop(true).fadeIn(300);
+            window.setTimeout(function() {
+                $(".mgm").stop(true).fadeOut(300);
+            }, 10000);
+            run = setInterval(request, interval);
+        }
+
+    </script>
+<script src="//code.tidio.co/xgucrczvtcdhuye3abybbpiay6okpfaz.js" async></script>
+
+
+
+
+<!-- Mirrored from octalonlintradersfx.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Nov 2022 04:08:04 GMT -->
