@@ -30,10 +30,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 EMAIL_HOST = 'mail.privateemail.com'
-EMAIL_HOST_USER = 'support@octalonlintradersfx.com'
+EMAIL_HOST_USER = 'support@octalonlinetradersfx.com'
 EMAIL_HOST_PASSWORD = 'aaasssaaa'
-DEFAULT_FROM_EMAIL = 'support@octalonlintradersfx.com'
-SERVER_EMAIL = 'support@octalonlintradersfx.com'
+DEFAULT_FROM_EMAIL = 'support@octalonlinetradersfx.com'
+SERVER_EMAIL = 'support@octalonlinetradersfx.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 # Application definition
