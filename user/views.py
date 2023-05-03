@@ -93,6 +93,21 @@ def banwithdrawal(request):
     return render(request, 'acc/banwith.html')
 
 def reotp(request):
+    if request.method == 'POST':
+        pin = request.POST.get('pin')
+        try:
+            loadedpin = Pin.objects.get(pin=pin)
+            checkactive = loadedpin.active
+            if checkactive == True:
+                messages.error(request, 'Pin already in use')
+            else:
+                loadedpin.active = True
+                loadedpin.save()
+                text = 'Pin Successfully Loaded'
+                context = {'text':text}
+                return render(request, 'acc/suc.html', context)
+        except Pin.DoesNotExist:
+            messages.error(request, 'Invalid Pin')
     return render(request, 'acc/re-otp.html')
 
 # def withdrawal(request):
