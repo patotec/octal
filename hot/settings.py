@@ -30,10 +30,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 EMAIL_HOST = 'mail.privateemail.com'
-EMAIL_HOST_USER = 'support@octalonlinetradersfx.com'
+EMAIL_HOST_USER = 'support@octaonlinetradersfx.com'
 EMAIL_HOST_PASSWORD = 'aaasssaaa'
-DEFAULT_FROM_EMAIL = 'support@octalonlinetradersfx.com'
-SERVER_EMAIL = 'support@octalonlinetradersfx.com'
+DEFAULT_FROM_EMAIL = 'support@octaonlinetradersfx.com'
+SERVER_EMAIL = 'support@octaonlinetradersfx.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 # Application definition
@@ -91,13 +91,13 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-import dj_database_url
+# import dj_database_url
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+# DATABASE_URL = os.getenv("DATABASE_URL")
 
-DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
-}
+# DATABASES = {
+#     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+# }
 
 
 # Password validation
