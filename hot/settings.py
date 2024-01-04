@@ -45,14 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',
     'index',
     'user',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -85,19 +83,14 @@ WSGI_APPLICATION = 'hot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
+import dj_database_url
+
+DATABASE_URL = 'postgres://dbtdjwcw:jSqVRu0AEhR7Hd8zHHwV0Rrjqw007ZGx@castor.db.elephantsql.com/dbtdjwcw'
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
 }
-# import dj_database_url
-
-# DATABASE_URL = os.getenv("DATABASE_URL")
-
-# DATABASES = {
-#     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
-# }
 
 
 # Password validation
@@ -137,10 +130,10 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =  os.path.join(BASE_DIR, 'static_cdn')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_URL = '/media_cdn/'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media_cdn')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 cloudinary.config( 
   cloud_name = "dfwysasj5", 
   api_key = "717662813998567", 
