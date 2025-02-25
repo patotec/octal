@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'hot.wsgi.application'
 
 import dj_database_url
 
-DATABASE_URL = 'postgres://dbtdjwcw:jSqVRu0AEhR7Hd8zHHwV0Rrjqw007ZGx@castor.db.elephantsql.com/dbtdjwcw'
+DATABASE_URL = 'postgres://avnadmin:AVNS_ezR9XQHPt3o1kXmea2w@pg-389158b9-fec1961-522e.c.aivencloud.com:17841/defaultdb?sslmode=require'
 
 DATABASES = {
     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
